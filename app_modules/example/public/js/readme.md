@@ -1,0 +1,1 @@
+This directory exist to contain typescript preprocessor result.

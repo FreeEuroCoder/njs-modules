@@ -1,0 +1,1 @@
+This directory exist to contain scss preprocessor result.
