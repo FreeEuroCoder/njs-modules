@@ -102,3 +102,29 @@ dist
 
 # TernJS port file
 .tern-port
+
+# AdonisJS framework files
+app/
+commands/
+config/
+contracts/
+providers/
+public/
+resources/
+start/
+tests/
+.adonisrc.json
+.editorconfig
+.env.example
+.prettierignore
+ace
+ace-manifest.json
+env.ts
+server.ts
+test.ts
+tsconfig.json
+webpack.config.js
+build
+.vscode
+.DS_STORE
+tmp
