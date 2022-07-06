@@ -1,15 +1,13 @@
-import njs_modules from './njs_modules'
+import njs_modules from './njs_modules.js'
 
-const { exec } = require("child_process");
-
-if (process.argv.length == 2) {
+if (process.argv.length == 3) {
     var action = process.argv[2]
 }
-if (process.argv.length == 3) {
+if (process.argv.length == 4) {
     var module_name = process.argv[2]
     var action = process.argv[3]
 }
-if (process.argv.length == 4) {
+if (process.argv.length >= 5) {
     var module_name = process.argv[2]
     var action = process.argv[3]
     var file_name = process.argv[4]
@@ -27,9 +25,8 @@ if (process.argv.length == 4) {
 // node modules <module_name> make:model <file_name (model_name)>
 // node modules <module_name> make:migration <file_name (migration_name)>
 
-if (action == '--init') app_modules.init()
-if (action == '--prepare') app_modules.prepare(module_name)
-if (action == 'make:controller') app_modules.make_controller(module_name, file_name)
-if (action == 'make:model') app_modules.make_model(module_name, file_name)
-if (action == 'make:migration') app_modules.make_migration(module_name, file_name)
+if (action == '--init') njs_modules.init()
+if (action == 'make:controller') njs_modules.make_controller(module_name, file_name)
+if (action == 'make:model') njs_modules.make_model(module_name, file_name)
+if (action == 'make:migration') njs_modules.make_migration(module_name, file_name)
 

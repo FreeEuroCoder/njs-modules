@@ -1,6 +1,9 @@
+import { exec } from 'child_process'
+import fs from 'fs';
+import path from 'path';
+
 export default class njs_modules {
     static make_model = (module_name, model_name) => {
-        var child_process = require('child_process');
 
         var command = ["node ace make:model",model_name].join(" ")
 
@@ -16,7 +19,7 @@ export default class njs_modules {
             console.log(`stdout: ${stdout}`);
 
             var fromPath = ["app/Models/",model_name,".ts"].join('')
-            var toPath = ["app_modules/",module_name,"/models/",model_name,".ts"].join('')
+            var toPath = ["njs-modules/",module_name,"/models/",model_name,".ts"].join('')
     
             console.log(fromPath);
             console.log(toPath);
@@ -26,9 +29,6 @@ export default class njs_modules {
     }
 
     static move_file = (fromPath, toPath) => {
-        var fs = require('fs');
-        var path = require('path');
-
         var from = path.resolve(fromPath);
         var to = path.resolve(toPath);
 
