@@ -1,6 +1,6 @@
 import Route from '@ioc:Adonis/Core/Route'
 
-export default class amRoute {
+export default class njs_routes {
 
     private static parseHandler(handler: string) {
         var pHandler = {

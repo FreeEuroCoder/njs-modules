@@ -1,7 +1,6 @@
 import View from '@ioc:Adonis/Core/View'
-import I18n from '@ioc:Adonis/Addons/I18n'
 
-export default class app_modules {
+export default class njs_modules {
     public static load() {
         this.loadViewsNamespaces();
         this.loadRoutes();
